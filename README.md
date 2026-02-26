@@ -1,1 +1,1 @@
-# Just some simple JS projects for practice.
+### Just some simple JS projects for practice.
