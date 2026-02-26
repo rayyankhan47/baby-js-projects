@@ -26,9 +26,11 @@ const generateQuote = () => {
     console.log("quote added");
 
     usedIndexes.add(randomIndex);
+    console.log("index added to usedIndexes");
 
-    if (usedIndexes.length === quotes.length) {
+    if (usedIndexes.size === quotes.length) {
         usedIndexes.clear()
+        console.log("indices set cleared")
     }
 }
 
