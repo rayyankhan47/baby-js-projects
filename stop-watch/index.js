@@ -28,7 +28,7 @@ function stopClock() {
 }
 
 function resetClock() {
-    stopClock();
+    if (!interval) stopClock(); // No stop if start -> reset
     secondsElapsed = 0;
     setTime();
 }
