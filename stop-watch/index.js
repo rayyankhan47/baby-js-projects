@@ -7,9 +7,10 @@ function padStart(value) {
 }
 
 function setTime() {
+    const hours = Math.floor(secondsElapsed / 3600);
     const minutes = Math.floor(secondsElapsed / 60);
     const seconds = secondsElapsed % 60;
-    time.innerHTML = `${padStart(minutes)}:${padStart(seconds)}`;
+    time.innerHTML = `${padStart(hours)}:${padStart(minutes)}:${padStart(seconds)}`;
 }
 
 function timer() {
@@ -18,7 +19,7 @@ function timer() {
 }
 
 function startClock() {
-    if (interval) stopClock();
+    if (interval) stopClock(); // No reset if start -> stop -> start
     interval = setInterval(timer, 1000);
 }
 
