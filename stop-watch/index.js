@@ -8,7 +8,7 @@ function padStart(value) {
 
 function setTime() {
     const hours = Math.floor(secondsElapsed / 3600);
-    const minutes = Math.floor(secondsElapsed / 60);
+    const minutes = Math.floor(secondsElapsed / 60) % 60;
     const seconds = secondsElapsed % 60;
     time.innerHTML = `${padStart(hours)}:${padStart(minutes)}:${padStart(seconds)}`;
 }
